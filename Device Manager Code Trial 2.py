@@ -34,7 +34,7 @@ name = 'Device Manager'
 # The pritn statements are for troubleshooting along the way, remove once working.
 time.sleep(1) # wait 1 second to make sure window is open, without it was happening too fast and would sometimes error.
 mywin = findwindows.find_window(active_only=True, class_name=className, title_re="Device Manager")
-print("mywin = " + str(mywin)) # this is the handle for the window
+print("Device Manager handle = " + str(mywin)) # this is the handle for the window
 
 app = Application(backend="uia").connect(handle=mywin)
 print("app = " + str(app))
