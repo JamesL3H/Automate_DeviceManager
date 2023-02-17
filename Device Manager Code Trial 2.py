@@ -8,7 +8,7 @@ import time
 # The way Device Manager is opened causes a popup to display.  The popup states:
 #     You are logged on as a standard user. You can view device settings in Device
 #     Manager, but you must be logged on as an administrator to make changes.
-#     Opening it this way, I can't Uninstall devices.  It has to be opened a different way.
+#     ** Opening it this way, I can't Uninstall devices.  It has to be opened a different way. **
 # '''
 # dlgBox = app.DeviceManager.child_window(title="OK", auto_id="2", control_type="Button").wrapper_object()
 # dlgBox.click_input() # Click on the OK button
