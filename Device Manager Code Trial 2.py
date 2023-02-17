@@ -33,7 +33,7 @@ name = 'Device Manager'
 
 # The pritn statements are for troubleshooting along the way, remove once working.
 time.sleep(1) # wait 1 second to make sure window is open, without it was happening too fast and would sometimes error.
-mywin = findwindows.find_window(active_only=True, class_name=className, title_re="Device Manager")
+mywin = findwindows.find_window(active_only=True, class_name=className, title_re=name)
 print("Device Manager handle = " + str(mywin)) # this is the handle for the window
 
 app = Application(backend="uia").connect(handle=mywin)
@@ -44,10 +44,10 @@ print("app = " + str(app))
 # menuView.click_input() # Clicks the View menu item
 # keyboard.send_keys('w') # Type w to select Show hidden devices
 
-win = app.window(title_re='Device Manager')
+win = app.window(title_re=name)
 print("win = " + str(win))
 
-dlg = app['Device Manager']
+dlg = app[name]
 print("dlg = " + str(dlg))
 
 '''
